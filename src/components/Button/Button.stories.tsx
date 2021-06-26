@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Button from '.';
+import Button, { ButtonType } from '.';
 
 export default {
   title: 'Components/Button',
@@ -12,14 +12,14 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Submit = Template.bind({});
-Submit.args = {
-  type: 'submit',
+export const Primary = Template.bind({});
+Primary.args = {
+  type: ButtonType.PRIMARY,
   text: 'Button',
 };
 
-export const _Button = Template.bind({});
-_Button.args = {
-  type: 'button',
+export const Default = Template.bind({});
+Default.args = {
+  type: ButtonType.DEFAULT,
   text: 'Button',
 };
